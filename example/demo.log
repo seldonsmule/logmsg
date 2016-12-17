@@ -1,0 +1,5 @@
+2016/12/17 13:33:04 demo.go:45: INFO | Your message should be in the file
+2016/12/17 13:33:04 demo.go:7: DEBUG02 | Debug 02 demo message - you should see this now
+2016/12/17 13:33:04 demo.go:9: DEBUG01 | Debug 01 demo message
+2016/12/17 13:33:04 demo.go:16: INFO | If having a helper method that dumps an array, and you use logmsg.Print().  Notice the line # is inside this method
+2016/12/17 13:33:04 demo.go:51: INFO | Now the line # is to where this methoed was called
