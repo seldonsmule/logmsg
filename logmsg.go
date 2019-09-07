@@ -103,9 +103,9 @@ func (l *MyLogMsg) init(){
 }
 
 //
-// SetLogFileName(name string) bool
+// SetLogFile(name string) bool
 // 
-// Sets up writint go a file.  If there is already a file opened, that will be close 1st (allowing for file rollover)
+// Sets up a log file.  If there is already a file opened, that will be close 1st (allowing for file rollover)
 //
 //  name - New name of the logfile.  Will be used relative to where the program is running unless an explicit path name is used
 //
@@ -121,6 +121,10 @@ func (l* MyLogMsg) SetLogFile(name string) bool{
 	if(l.fileHandle != nil){
 		l.fileHandle.Close()
 	}
+
+        // delete file if already there to start new
+       	_ = os.Remove(name)
+
 	
 	l.fileHandle, err = os.OpenFile(name, os.O_CREATE|os.O_WRONLY, 0666)
     
