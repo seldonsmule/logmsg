@@ -1,3 +1,3 @@
 module github.com/seldonsmule/logmsg
 
-go 1.16
+go 1.23.2
